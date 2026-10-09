@@ -1,0 +1,38 @@
+{
+  "name": "ai-qa-scoring-hitl",
+  "version": "1.0.0",
+  "description": "AI drafts QA scores for support conversations via MCP tools; deterministic guardrails validate them; a human approves or rejects before anything becomes official.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "seed": "node --disable-warning=ExperimentalWarning scripts/seed.mjs",
+    "batch": "node --disable-warning=ExperimentalWarning scripts/batch.mjs",
+    "api": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning scripts/dev.mjs",
+    "build": "vite build",
+    "mcp": "node --disable-warning=ExperimentalWarning qa-mcp/server.js",
+    "golden:eval": "node --disable-warning=ExperimentalWarning scripts/golden-set-eval.mjs",
+    "test": "vitest run",
+    "mcp:smoke": "node --disable-warning=ExperimentalWarning scripts/mcp-smoke.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1",
+    "@hono/node-server": "^2.1.4",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "hono": "^4.13.13",
+    "lucide-react": "^1.54.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3"
+  }
+}
