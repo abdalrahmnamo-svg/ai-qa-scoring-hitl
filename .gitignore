@@ -11,3 +11,8 @@ coverage/
 _import/
 .vscode/*
 .idea/
+
+analysis/.venv/
+analysis/data/*
+!analysis/data/sample_eval.csv
+.ipynb_checkpoints/

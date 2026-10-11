@@ -1,6 +1,20 @@
 # ai-qa-scoring-hitl
 
-An AI agent drafts quality scores for support conversations through MCP tools, deterministic guardrails validate every draft, and a human approves or rejects it in a review queue before anything becomes an official score. A golden-set evaluation measures how often the AI agrees with human reviewers.
+An AI agent drafts QA scores for support conversations through MCP tools, deterministic guardrails validate every draft, a human approves or rejects it before it becomes official, and an evaluation layer measures how well the AI agrees with human raters.
+
+## Evaluation results
+
+Golden set: 20 conversations x 18 criteria, AI drafts (mock scorer) vs held-out human scores. Full analysis in [`analysis/rater_agreement.ipynb`](analysis/rater_agreement.ipynb); reproduce with the steps in [`analysis/README.md`](analysis/README.md).
+
+- **Totals:** 16/20 drafts within +/-5 points of the human total (80.0%); mean absolute error 3.15 points.
+- **Bias:** the AI is more lenient on average, +2.85 points (95% CI 1.64 to 4.06); Bland-Altman limits of agreement -2.21 to +7.91.
+- **Pass/fail (pass mark 90):** 90% raw agreement, Cohen's kappa 0.80 (bootstrap 95% CI 0.48 to 1.00); both disagreements have an AI total within 3 points of the pass mark (87 and 92).
+- **Per criterion:** most lenient are `p2` documents actions (+1.05 pts, +15% of max, weighted kappa 0.57), `u3` shows empathy (+0.40) and `u1` asks the right questions (+0.35); the only harsher criterion is `r3` clear writing (-0.15). Five criteria agree on every conversation. Stated confidence did not track error (Spearman 0.01); the highest-confidence bin (6 conversations) actually had the lowest pass/fail agreement (50% vs 100% and 86% in the lower bins), so confidence should not be used to skip review (small n, synthetic data).
+
+![Bland-Altman plot of AI minus human total score](docs/bland_altman.png)
+![Per-criterion bias, AI minus human](docs/criterion_bias.png)
+
+Caveat: all data is synthetic, the "human" scores are simulated reviewers, and the AI is a keyword and timing heuristic (the mock scorer). With n = 20 the intervals are wide. These numbers demonstrate the method and guard the pipeline; they say nothing about any real model or QA team.
 
 ## Problem
 
@@ -23,7 +37,7 @@ flowchart LR
 
 ## Tech
 
-Node 24, built-in `node:sqlite` (plain SQL migrations, no ORM), Hono API, `@modelcontextprotocol/sdk` (stdio), Vite + React + Tailwind review UI, Vitest. Scorers: `mock` (default, deterministic, no key) and `claude` (`@anthropic-ai/sdk`). No Docker.
+Node 24, built-in `node:sqlite` (plain SQL migrations, no ORM), Hono API, `@modelcontextprotocol/sdk` (stdio), Vite + React + Tailwind review UI, Vitest. Evaluation analysis: Python 3.12+ with pandas, NumPy, scikit-learn, statsmodels, matplotlib and a Jupyter notebook run by nbconvert in CI. Scorers: `mock` (default, deterministic, no key) and `claude` (`@anthropic-ai/sdk`). No Docker.
 
 ## Quick start (no API key needed)
 
@@ -36,6 +50,7 @@ npm test              # Vitest, uses the mock scorer only
 npm run batch         # the mock scorer drafts the latest day's batch (12 drafts)
 npm run dev           # API on :3001 + Review Queue on http://localhost:5173
 npm run golden:eval   # agreement between AI drafts and the golden set
+npm run eval:export   # CSVs for the notebook in analysis/ (see analysis/README.md)
 npm run mcp           # stdio MCP server (needs QA_MCP_TOKEN; see mcp.example.json)
 ```
 

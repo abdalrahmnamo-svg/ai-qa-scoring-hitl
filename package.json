@@ -15,6 +15,7 @@
     "dev": "node --disable-warning=ExperimentalWarning scripts/dev.mjs",
     "build": "vite build",
     "mcp": "node --disable-warning=ExperimentalWarning qa-mcp/server.js",
+    "eval:export": "node --disable-warning=ExperimentalWarning scripts/export-eval.mjs",
     "golden:eval": "node --disable-warning=ExperimentalWarning scripts/golden-set-eval.mjs",
     "test": "vitest run",
     "mcp:smoke": "node --disable-warning=ExperimentalWarning scripts/mcp-smoke.mjs"

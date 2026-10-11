@@ -1,0 +1,55 @@
+conversation_id,agent,date,criterion_id,criterion_label,section,max_points,ai_points,human_points,deterministic,ai_total,human_total,ai_pass,human_pass,ai_confidence
+CONV-0014,Agent Charlie,2025-03-06,g1,Introduces self and addresses the customer,greeting,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,g2,First reply within target time,greeting,10,10,10,1,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,g3,No long gaps between messages,greeting,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,u1,Asks the right questions,understanding,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,u2,Validates customer information,understanding,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,u3,Shows empathy,understanding,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,u4,Reviews account history,understanding,5,0,0,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,r1,Takes the right system action,resolution,6,3,6,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,r2,Proposes a correct solution,resolution,10,10,10,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,r3,"Clear, error-free writing",resolution,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,c1,Follows up,confirmation,5,3,3,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,c2,Confirms all needs are met,confirmation,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,c3,"Clear, simple answers",confirmation,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,t1,Ends the chat on a high note,courtesy,5,5,5,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,t2,Shows appreciation,courtesy,2,2,2,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,t3,Closing courtesy phrase,courtesy,2,2,2,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,p1,Sets expectations,process,8,8,8,0,87,90,0,1,0.83
+CONV-0014,Agent Charlie,2025-03-06,p2,Documents actions and exceptions,process,7,4,4,0,87,90,0,1,0.83
+CONV-0039,Agent Bravo,2025-03-06,g1,Introduces self and addresses the customer,greeting,5,0,0,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,g2,First reply within target time,greeting,10,10,10,1,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,g3,No long gaps between messages,greeting,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,u1,Asks the right questions,understanding,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,u2,Validates customer information,understanding,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,u3,Shows empathy,understanding,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,u4,Reviews account history,understanding,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,r1,Takes the right system action,resolution,6,3,3,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,r2,Proposes a correct solution,resolution,10,10,10,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,r3,"Clear, error-free writing",resolution,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,c1,Follows up,confirmation,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,c2,Confirms all needs are met,confirmation,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,c3,"Clear, simple answers",confirmation,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,t1,Ends the chat on a high note,courtesy,5,5,5,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,t2,Shows appreciation,courtesy,2,2,2,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,t3,Closing courtesy phrase,courtesy,2,2,2,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,p1,Sets expectations,process,8,8,8,0,92,89,1,0,0.87
+CONV-0039,Agent Bravo,2025-03-06,p2,Documents actions and exceptions,process,7,7,4,0,92,89,1,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,g1,Introduces self and addresses the customer,greeting,5,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,g2,First reply within target time,greeting,10,10,10,1,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,g3,No long gaps between messages,greeting,5,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,u1,Asks the right questions,understanding,5,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,u2,Validates customer information,understanding,5,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,u3,Shows empathy,understanding,5,5,3,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,u4,Reviews account history,understanding,5,0,0,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,r1,Takes the right system action,resolution,6,6,6,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,r2,Proposes a correct solution,resolution,10,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,r3,"Clear, error-free writing",resolution,5,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,c1,Follows up,confirmation,5,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,c2,Confirms all needs are met,confirmation,5,5,3,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,c3,"Clear, simple answers",confirmation,5,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,t1,Ends the chat on a high note,courtesy,5,5,5,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,t2,Shows appreciation,courtesy,2,0,0,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,t3,Closing courtesy phrase,courtesy,2,2,2,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,p1,Sets expectations,process,8,8,8,0,88,81,0,0,0.87
+CONV-0041,Agent Charlie,2025-03-03,p2,Documents actions and exceptions,process,7,7,4,0,88,81,0,0,0.87
